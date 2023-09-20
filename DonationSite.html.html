@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate to Our NGO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333; /* Dark Grey Background Color */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            background-color: #333; /* Dark Grey Background Color */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .logo {
+            max-width: 100%;
+            height: auto;
+        }
+        .donation-option {
+            cursor: pointer;
+            border: 2px solid #333;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .donation-option:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        .donation-details {
+            display: none;
+        }
+        .contact-us {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="pave the way logo-2.png" alt="Your NGO Logo" class="logo">
+        <h1>A Donation for a Box</h1>
+    </header>
+    <div class="container">
+        <div class="donation-option" id="online-donation-link">
+            <h2>Online Donation</h2>
+        </div>
+        <div class="donation-details" id="online-donation">
+            <h2>Online Donation (OMT Card)</h2>
+            <p>Thank you for choosing to donate via OMT card. Your contribution helps support our mission.</p>
+            
+            <p><strong>OMT Card Details:</strong></p>
+            <ul>
+                <li>Card Number: 4069 6911 0192 4146</li>
+                <li>Name: Lily Naim </li>
+            </ul>
+            
+            <p>Please use your OMT card to transfer your donation to the provided OMT card. Be sure to include a reference or note indicating "Donation for Pave The Way." Once the transfer is complete, your donation will go toward our initiatives.</p>
+            
+            <p>Thank you for your generosity!</p>
+        </div>
+        <div class="donation-option" id="cash-donation-link">
+            <h2>Cash Donation</h2>
+        </div>
+        <div class="donation-details" id="cash-donation">
+            <h2>Cash Donation</h2>
+            <p>If you wish to make a cash donation, please contact one of our representatives at the following phone numbers:</p>
+            <ul>
+                <li>Sasha Naim: +961 78 828 314</li>
+                <li>Rawane Bahous: +961 03 259 330</li>
+            </ul>
+            <p>Thank you for your generosity!</p> <!-- Added "Thank you" message here -->
+        </div>
+        <div class="contact-us">
+            <h2>Contact Us</h2>
+            <p>Email: 
+                <a href="mailto:pavetheway.lb@gmail.com">
+            pavetheway.lb@gmail.com </a> </p>
+            <p>Instagram: <a href="https://www.instagram.com/your_instagram/">@pavetheway.lb</a></p>
+            <p>Sasha Naim: +961 78 828 314</p>
+            <p>Rawane Bahous: +961 03 259 330</p>
+            <p>If you would like to volunteer with us, please fill out this form:</p>
+            <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScZMMbG7ihLYMbPU1ft7UGBP1WcWJnbHmAOPYFaK86Ztro0OA/viewform?usp=sharing">Volunteer Form</a></p>
+        </div>
+    </div>
+    <script>
+        const onlineDonationLink = document.getElementById('online-donation-link');
+        const cashDonationLink = document.getElementById('cash-donation-link');
+        const onlineDonation = document.getElementById('online-donation');
+        const cashDonation = document.getElementById('cash-donation');
+
+        onlineDonation.style.display = 'none'; // Hide online donation details initially
+
+        onlineDonationLink.addEventListener('click', () => {
+            if (onlineDonation.style.display === 'none' || onlineDonation.style.display === '') {
+                onlineDonation.style.display = 'block';
+                cashDonation.style.display = 'none';
+            } else {
+                onlineDonation.style.display = 'none';
+            }
+        });
+
+        cashDonationLink.addEventListener('click', () => {
+            if (cashDonation.style.display === 'none' || cashDonation.style.display === '') {
+                cashDonation.style.display = 'block';
+                onlineDonation.style.display = 'none';
+            } else {
+                cashDonation.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
